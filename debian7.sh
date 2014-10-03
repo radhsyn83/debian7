@@ -231,6 +231,7 @@ wget -O user-expire "https://github.com/radhsyn83/debian7/raw/master/user-expire
 wget -O user-list "https://github.com/radhsyn83/debian7/raw/master/user-list"
 #wget -O autokill.sh "https://raw.github.com/yurisshOS/debian7os/master/autokill.sh"
 wget -O /etc/issue.net "https://github.com/radhsyn83/debian7/raw/master/banner"
+wget -O expire "https://github.com/radhsyn83/debian7/raw/master/expired"
 echo "0 0 * * * root /usr/bin/user-expired" > /etc/cron.d/user-expired
 #echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
@@ -239,6 +240,7 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
 chmod +x bench-network
 chmod +x speedtest
+chmod +x expired
 chmod +x ramtest
 chmod +x user-login
 chmod +x user-expire

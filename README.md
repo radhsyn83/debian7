@@ -36,7 +36,7 @@ Script
 7. user-add 'user' 'pass' = tambah user masa aktif 30hari. 'Contoh : user-add sempai sempai123'
 8. user-expired = Auto Lock User Expire tiap jam 00:00
 9. user-expirelock = kunci user yang sudah expire
-10.user-list = Melihat informasi semua user
+10. user-list = Melihat informasi semua user
 
 Fitur lain
 ----------

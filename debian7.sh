@@ -295,6 +295,7 @@ echo "user-login (Monitoring User Login Dropbear, OpenSSH dan PPTP VPN)"  | tee 
 echo "user-login (Monitoring User Login)"  | tee -a log-install.txt
 echo "user-expired (Auto Lock User Expire tiap jam 00:00)"  | tee -a log-install.txt
 echo "user-list (Melihat Daftar User)"  | tee -a log-install.txt
+echo "expired (kunci user expired)"  | tee -a log-install.txt
 echo "sh dropmon [port] contoh: sh dropmon 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt

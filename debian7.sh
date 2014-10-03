@@ -194,6 +194,9 @@ cd
 # install fail2ban
 apt-get -y install fail2ban;service fail2ban restart
 
+# install nano
+apt-get -y install nano
+
 # install squid3
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf "https://github.com/radhsyn83/debian7/raw/master/squid3.conf"
@@ -216,32 +219,33 @@ service vnstat restart
 #./pptpinstall.sh
 
 # download script
-cd
-wget -O speedtest_cli.py "https://github.com/radhsyn83/debian7/raw/master/speedtest_cli.py"
-wget -O bench-network.sh "https://github.com/radhsyn83/debian7/raw/master/bench-network.sh"
+cd /usr/bin/
+wget -O trial "https://github.com/radhsyn83/debian7/raw/master/trial"
+wget -O speedtest.py "https://github.com/radhsyn83/debian7/raw/master/speedtest.py"
+wget -O bench-network "https://github.com/radhsyn83/debian7/raw/master/bench-network"
 wget -O ps_mem.py "https://github.com/radhsyn83/debian7/raw/master/ps_mem.py"
 wget -O dropmon "https://github.com/radhsyn83/debian7/raw/master/dropmon.sh"
-wget -O user-login.sh "https://github.com/radhsyn83/debian7/raw/master/user-login.sh"
-wget -O user-expired.sh "https://github.com/radhsyn83/debian7/raw/master/user-expired.sh"
+wget -O user-login "https://github.com/radhsyn83/debian7/raw/master/user-login"
+wget -O user-expire "https://github.com/radhsyn83/debian7/raw/master/user-expire"
 #wget -O userlimit.sh "https://raw.github.com/yurisshOS/debian7os/master/userlimit.sh"
-wget -O user-list.sh "https://github.com/radhsyn83/debian7/raw/master/user-list.sh"
+wget -O user-list "https://github.com/radhsyn83/debian7/raw/master/user-list"
 #wget -O autokill.sh "https://raw.github.com/yurisshOS/debian7os/master/autokill.sh"
 wget -O /etc/issue.net "https://github.com/radhsyn83/debian7/raw/master/banner"
-echo "0 0 * * * root /root/user-expired.sh" > /etc/cron.d/user-expired
+echo "0 0 * * * root /usr/bin/user-expired" > /etc/cron.d/user-expired
 #echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #echo "@reboot root /root/autokill.sh" > /etc/cron.d/autokill
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
-chmod +x bench-network.sh
-chmod +x speedtest_cli.py
+chmod +x bench-network
+chmod +x speedtest.py
 chmod +x ps_mem.py
-chmod +x user-login.sh
-chmod +x user-expired.sh
+chmod +x user-login
+chmod +x user-expire
 #chmod +x userlimit.sh
 #chmod +x autokill.sh
 chmod +x dropmon
-chmod +x user-list.sh
+chmod +x user-list
 
 # finishing
 chown -R www-data:www-data /home/vps/public_html
@@ -281,14 +285,14 @@ echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
 echo "screenfetch"  | tee -a log-install.txt
-echo "./ps_mem.py (Cek RAM)"  | tee -a log-install.txt
-echo "./speedtest_cli.py --share (Speed Test VPS)"  | tee -a log-install.txt
-echo "./bench-network.sh (Cek Kualitas VPS)"  | tee -a log-install.txt
-echo "./user-login.sh (Monitoring User Login Dropbear, OpenSSH dan PPTP VPN)"  | tee -a log-install.txt
-#echo "./user-login.sh (Monitoring User Login)"  | tee -a log-install.txt
-echo "./user-expired.sh (Auto Lock User Expire tiap jam 00:00)"  | tee -a log-install.txt
-#echo "./user-limit.sh 2 [ini utk melimit max 2 login]" | tee -a log-install.txt
-echo "./user-list.sh (Melihat Daftar User)"  | tee -a log-install.txt
+echo "trial (Membuat akun Trial)"  | tee -a log-install.txt
+echo "ps_mem.py (Cek RAM)"  | tee -a log-install.txt
+echo "speedtest_cli.py --share (Speed Test VPS)"  | tee -a log-install.txt
+echo "bench-network (Cek Kualitas VPS)"  | tee -a log-install.txt
+echo "user-login (Monitoring User Login Dropbear, OpenSSH dan PPTP VPN)"  | tee -a log-install.txt
+echo "user-login (Monitoring User Login)"  | tee -a log-install.txt
+echo "user-expired (Auto Lock User Expire tiap jam 00:00)"  | tee -a log-install.txt
+echo "user-list (Melihat Daftar User)"  | tee -a log-install.txt
 echo "sh dropmon [port] contoh: sh dropmon 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt

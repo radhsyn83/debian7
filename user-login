@@ -40,23 +40,6 @@ do
         fi
 done
 
-echo "";
-
-echo "-------------------";
-echo "Checking PPTP login";
-echo "-------------------";
-last | grep ppp | grep still
-
-echo "";
-
-#Melihat Riwayat Login User
-echo "---------------------------";
-echo "Checking PPTP Login History";
-echo "---------------------------";
-last | grep ppp
-
-echo "";
-
 echo "------------------------------------------------"
 echo " Caranya Kill User yang nakal "
 echo " kill (PID) "
@@ -65,4 +48,4 @@ echo "------------------------------------------------"
 
 echo "";
 
-echo "Script By Radhsyn83;
+echo "Script By Radhsyn83";

@@ -221,9 +221,9 @@ service vnstat restart
 # download script
 cd /usr/bin/
 wget -O trial "https://github.com/radhsyn83/debian7/raw/master/trial"
-wget -O speedtest.py "https://github.com/radhsyn83/debian7/raw/master/speedtest.py"
+wget -O speedtest "https://github.com/radhsyn83/debian7/raw/master/speedtest"
 wget -O bench-network "https://github.com/radhsyn83/debian7/raw/master/bench-network"
-wget -O ps_mem.py "https://github.com/radhsyn83/debian7/raw/master/ps_mem.py"
+wget -O ramtest "https://github.com/radhsyn83/debian7/raw/master/ramtest"
 wget -O dropmon "https://github.com/radhsyn83/debian7/raw/master/dropmon.sh"
 wget -O user-login "https://github.com/radhsyn83/debian7/raw/master/user-login"
 wget -O user-expire "https://github.com/radhsyn83/debian7/raw/master/user-expire"
@@ -238,8 +238,8 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #echo "@reboot root /root/autokill.sh" > /etc/cron.d/autokill
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
 chmod +x bench-network
-chmod +x speedtest.py
-chmod +x ps_mem.py
+chmod +x speedtest
+chmod +x ramtest
 chmod +x user-login
 chmod +x user-expire
 #chmod +x userlimit.sh
@@ -286,8 +286,8 @@ echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
 echo "screenfetch"  | tee -a log-install.txt
 echo "trial (Membuat akun Trial)"  | tee -a log-install.txt
-echo "ps_mem.py (Cek RAM)"  | tee -a log-install.txt
-echo "speedtest_cli.py --share (Speed Test VPS)"  | tee -a log-install.txt
+echo "ramtest (Cek RAM)"  | tee -a log-install.txt
+echo "speedtest --share (Speed Test VPS)"  | tee -a log-install.txt
 echo "bench-network (Cek Kualitas VPS)"  | tee -a log-install.txt
 echo "user-login (Monitoring User Login Dropbear, OpenSSH dan PPTP VPN)"  | tee -a log-install.txt
 echo "user-login (Monitoring User Login)"  | tee -a log-install.txt

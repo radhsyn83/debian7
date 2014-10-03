@@ -226,12 +226,13 @@ wget -O bench-network "https://github.com/radhsyn83/debian7/raw/master/bench-net
 wget -O ramtest "https://github.com/radhsyn83/debian7/raw/master/ramtest"
 wget -O dropmon "https://github.com/radhsyn83/debian7/raw/master/dropmon.sh"
 wget -O user-login "https://github.com/radhsyn83/debian7/raw/master/user-login"
+wget -O user-add "https://github.com/radhsyn83/debian7/raw/master/user-add"
 wget -O user-expire "https://github.com/radhsyn83/debian7/raw/master/user-expire"
 #wget -O userlimit.sh "https://raw.github.com/yurisshOS/debian7os/master/userlimit.sh"
 wget -O user-list "https://github.com/radhsyn83/debian7/raw/master/user-list"
 #wget -O autokill.sh "https://raw.github.com/yurisshOS/debian7os/master/autokill.sh"
 wget -O /etc/issue.net "https://github.com/radhsyn83/debian7/raw/master/banner"
-wget -O expire "https://github.com/radhsyn83/debian7/raw/master/expired"
+wget -O user-expirelock "https://github.com/radhsyn83/debian7/raw/master/user-expirelock"
 echo "0 0 * * * root /usr/bin/user-expired" > /etc/cron.d/user-expired
 #echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
@@ -240,9 +241,10 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
 chmod +x bench-network
 chmod +x speedtest
-chmod +x expired
+chmod +x user-expirelock
 chmod +x ramtest
 chmod +x user-login
+chmod +x user-add
 chmod +x user-expire
 #chmod +x userlimit.sh
 #chmod +x autokill.sh
@@ -293,9 +295,10 @@ echo "speedtest --share (Speed Test VPS)"  | tee -a log-install.txt
 echo "bench-network (Cek Kualitas VPS)"  | tee -a log-install.txt
 echo "user-login (Monitoring User Login Dropbear, OpenSSH dan PPTP VPN)"  | tee -a log-install.txt
 echo "user-login (Monitoring User Login)"  | tee -a log-install.txt
+echo "user-add (user) (pass) (Untuk menambah user aktif 30hari. Contoh : user-add sempai sempai123)"  | tee -a log-install.txt
 echo "user-expired (Auto Lock User Expire tiap jam 00:00)"  | tee -a log-install.txt
 echo "user-list (Melihat Daftar User)"  | tee -a log-install.txt
-echo "expired (kunci user expired)"  | tee -a log-install.txt
+echo "user-expirelock (kunci user expired)"  | tee -a log-install.txt
 echo "sh dropmon [port] contoh: sh dropmon 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt

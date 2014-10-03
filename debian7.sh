@@ -276,7 +276,7 @@ echo "Service"  | tee -a log-install.txt
 echo "-------"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
 echo "Dropbear : 443, 110, 109"  | tee -a log-install.txt
-echo "Squid3    : 80, 8080 (limit to IP SSH)"  | tee -a log-install.txt
+echo "Squid3   : 80, 8080 (limit to IP SSH)"  | tee -a log-install.txt
 #echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
 #echo "PPTP VPN  : Create User via Putty (echo "username pptpd password *" >> /etc/ppp/chap-secrets)"  | tee -a log-install.txt
@@ -288,18 +288,16 @@ echo "axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs venet0"  | tee -a
 echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
-echo "screenfetch"  | tee -a log-install.txt
-echo "trial (Membuat akun Trial)"  | tee -a log-install.txt
-echo "ramtest (Cek RAM)"  | tee -a log-install.txt
-echo "speedtest --share (Speed Test VPS)"  | tee -a log-install.txt
-echo "bench-network (Cek Kualitas VPS)"  | tee -a log-install.txt
-echo "user-login (Monitoring User Login Dropbear, OpenSSH dan PPTP VPN)"  | tee -a log-install.txt
-echo "user-login (Monitoring User Login)"  | tee -a log-install.txt
-echo "user-add (user) (pass) (Untuk menambah user aktif 30hari. Contoh : user-add sempai sempai123)"  | tee -a log-install.txt
-echo "user-expired (Auto Lock User Expire tiap jam 00:00)"  | tee -a log-install.txt
-echo "user-list (Melihat Daftar User)"  | tee -a log-install.txt
-echo "user-expirelock (kunci user expired)"  | tee -a log-install.txt
-echo "sh dropmon [port] contoh: sh dropmon 443" | tee -a log-install.txt
+echo "1. screenfetch"  | tee -a log-install.txt
+echo "2. trial = Membuat akun Trial"  | tee -a log-install.txt
+echo "3. ramtest = Cek RAM"  | tee -a log-install.txt
+echo "4. speedtest --share = Speed Test VPS"  | tee -a log-install.txt
+echo "5. bench-network = Cek Kualitas VPS"  | tee -a log-install.txt
+echo "6. user-login = Monitoring User Login Dropbear dan OpenSSH"  | tee -a log-install.txt
+echo "7. user-add 'user' 'pass' = tambah user masa aktif 30hari. 'Contoh : user-add sempai sempai123'"  | tee -a log-install.txt
+echo "8. user-expired = Auto Lock User Expire tiap jam 00:00"  | tee -a log-install.txt
+echo "9. user-expirelock = kunci user yang sudah expire"  | tee -a log-install.txt
+echo "10.user-list = Melihat informasi semua user"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt

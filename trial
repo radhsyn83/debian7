@@ -1,0 +1,10 @@
+#!/bin/bash
+Login="OASM-trial"
+mumetndase="1"
+Pass=`</dev/urandom tr -dc a-f1-9 | head -c9`
+IP=`ifconfig venet0:0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
+clear
+useradd -e `date -d "$mumetndase days" +"%Y-%m-%d"` -s /bin/false -M $Login
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+clear
+echo -e "********************\n\nHost: $IP\nPort: 443\nUser: $Login\nPassword: $Pass\n\n\n********************\n\n"

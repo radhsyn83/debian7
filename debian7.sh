@@ -228,6 +228,7 @@ wget -O dropmon "https://github.com/radhsyn83/debian7/raw/master/dropmon.sh"
 wget -O user-login "https://github.com/radhsyn83/debian7/raw/master/user-login"
 wget -O user-add "https://github.com/radhsyn83/debian7/raw/master/user-add"
 wget -O user-expire "https://github.com/radhsyn83/debian7/raw/master/user-expire"
+wget -O privasi "https://github.com/radhsyn83/debian7/raw/master/privasi"
 #wget -O userlimit.sh "https://raw.github.com/yurisshOS/debian7os/master/userlimit.sh"
 wget -O user-list "https://github.com/radhsyn83/debian7/raw/master/user-list"
 #wget -O autokill.sh "https://raw.github.com/yurisshOS/debian7os/master/autokill.sh"
@@ -240,6 +241,7 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #echo "@reboot root /root/autokill.sh" > /etc/cron.d/autokill
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
 chmod +x bench-network
+chmod +x privasi
 chmod +x speedtest
 chmod +x user-expirelock
 chmod +x ramtest

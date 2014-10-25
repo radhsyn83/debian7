@@ -41,11 +41,17 @@ Script
 Fitur lain
 ----------
 Webmin   : http://:10000/
+
 vnstat   : http://:81/vnstat/ (Cek Bandwith)
+
 MRTG     : http://:81/mrtg/
+
 Timezone : Asia/Jakarta (GMT +7)
+
 Fail2Ban : [on]
+
 IPv6     : [off]
+
 
 Script Modified by Fathur Radhy (www.fb.com/radhy.only)
 Credit to Yurissh OpenSource

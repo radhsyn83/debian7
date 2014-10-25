@@ -242,6 +242,7 @@ echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 #sed -i '$ i\screen -AmdS check /root/autokill.sh' /etc/rc.local
 chmod +x bench-network
 chmod +x privasi
+chmod +x trial
 chmod +x speedtest
 chmod +x user-expirelock
 chmod +x ramtest

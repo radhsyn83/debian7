@@ -1,6 +1,6 @@
 #!/bin/bash
 Login="trial"
-Pass=`</dev/urandom tr -dc a-f1-9 | head -c9`
+Pass=`</dev/urandom tr -dc a-c1-3 | head -c3`
 IP=`ifconfig venet0:0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
 clear
 useradd -e -s /bin/false -M $Login

@@ -84,7 +84,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://github.com/radhsyn83/debian7/raw/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Modified by Yuri Bhuana</pre>" > /home/vps/public_html/index.html
+echo "<pre>Edited by Radh_syn</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf "https://github.com/radhsyn83/debian7/raw/master/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf

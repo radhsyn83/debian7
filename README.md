@@ -28,7 +28,7 @@ axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs venet0
 Script
 ------
 1. screenfetch
-2. user-trial "namauser" = Membuat akun Trial 'Contoh : trial sempai'
+2. trial "namauser" = Membuat akun Trial
 3. ramtest = Cek RAM
 4. speedtest --share = Speed Test VPS
 5. bench-network = Cek Kualitas VPS

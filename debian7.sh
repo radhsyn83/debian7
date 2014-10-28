@@ -292,7 +292,7 @@ echo ""  | tee -a log-install.txt
 echo "Script"  | tee -a log-install.txt
 echo "------"  | tee -a log-install.txt
 echo "1. screenfetch"  | tee -a log-install.txt
-echo "2. trial = Membuat akun Trial"  | tee -a log-install.txt
+echo "2. trial = Membuat akun Trial"| tee -a log-install.txt
 echo "3. ramtest = Cek RAM"  | tee -a log-install.txt
 echo "4. speedtest --share = Speed Test VPS"  | tee -a log-install.txt
 echo "5. bench-network = Cek Kualitas VPS"  | tee -a log-install.txt

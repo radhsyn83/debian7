@@ -1,0 +1,7 @@
+#!/bin/bash
+Login="leaked"
+Pass=`</dev/urandom tr -dc a-z1-3 | head -c3`
+IP="sense324"
+#clear
+useradd -s /bin/false -m $Login
+echo -e "$Pass\n$Pass\n" | passwd $Login &> /dev/null

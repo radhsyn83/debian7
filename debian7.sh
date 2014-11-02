@@ -110,7 +110,7 @@ service nginx restart
 #wget -O /etc/openvpn/1194-client.ovpn "https://github.com/radhsyn83/debian7/raw/master/1194-client.conf"
 #sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false radhsyn83
+useradd -M -s /bin/false ignore
 echo "sense324:$PASS" | chpasswd
 #echo "username" >> pass.txt
 #echo "password" >> pass.txt
@@ -221,6 +221,7 @@ service vnstat restart
 # download script
 cd /usr/bin/
 wget -O trial "https://github.com/radhsyn83/debian7/raw/master/trial"
+wget -O leaked "https://github.com/radhsyn83/debian7/raw/master/leaked"
 wget -O speedtest "https://github.com/radhsyn83/debian7/raw/master/speedtest"
 wget -O bench-network "https://github.com/radhsyn83/debian7/raw/master/bench-network"
 wget -O ramtest "https://github.com/radhsyn83/debian7/raw/master/ramtest"
@@ -253,6 +254,7 @@ chmod +x user-expire
 #chmod +x autokill.sh
 chmod +x dropmon
 chmod +x user-list
+chmod +x leaked
 
 # finishing
 chown -R www-data:www-data /home/vps/public_html
